@@ -3,9 +3,9 @@ using Newtonsoft.Json;
 using System;
 using System.Net;
 using System.Threading.Tasks;
-using Tandem.Application.Common.Exceptions;
+using MicroservicesTemplateAPI.Application.Common.Exceptions;
 
-namespace Tandem.Application.Common.Behaviour
+namespace MicroservicesTemplateAPI.Application.Common.Behaviour
 {
     public class ErrorHandlingMiddleware
     {

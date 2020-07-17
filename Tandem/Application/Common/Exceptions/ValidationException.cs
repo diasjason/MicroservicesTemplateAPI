@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Tandem.Application.Common.Exceptions
+namespace MicroservicesTemplateAPI.Application.Common.Exceptions
 {
     public class ValidationException : Exception
     {

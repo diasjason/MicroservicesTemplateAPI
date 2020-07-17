@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Tandem.Controllers
+namespace MicroservicesTemplateAPI.Controllers
 {
     public class ApiController : ControllerBase
     {

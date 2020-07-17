@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Tandem.Application.Common.Exceptions
+namespace MicroservicesTemplateAPI.Application.Common.Exceptions
 {
     public class NotFoundException : Exception
     {

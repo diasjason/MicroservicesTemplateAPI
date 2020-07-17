@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using ValidationException = Tandem.Application.Common.Exceptions.ValidationException;
+using ValidationException = MicroservicesTemplateAPI.Application.Common.Exceptions.ValidationException;
 
-namespace Tandem.Application.Common.Behaviour
+namespace MicroservicesTemplateAPI.Application.Common.Behaviour
 {
     public class RequestValidationBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
         where TRequest : IRequest<TResponse>

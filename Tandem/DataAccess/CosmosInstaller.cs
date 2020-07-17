@@ -3,9 +3,9 @@ using Cosmonaut.Extensions.Microsoft.DependencyInjection;
 using Microsoft.Azure.Documents.Client;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Tandem.Domain.Entities;
+using MicroservicesTemplateAPI.Domain.Entities;
 
-namespace Tandem.DataAccess
+namespace MicroservicesTemplateAPI.DataAccess
 {
     public static class CosmosInstaller
     {
@@ -16,7 +16,7 @@ namespace Tandem.DataAccess
                 config["CosmosSettings:AccountKey"],
             new ConnectionPolicy { ConnectionMode = ConnectionMode.Direct, ConnectionProtocol = Protocol.Tcp });
 
-            services.AddCosmosStore<User>(cosmosStoreSettings);
+            services.AddCosmosStore<Contact>(cosmosStoreSettings);
             services.AddHealthChecks().AddCosmosDb($"AccountEndpoint={config["CosmosSettings:AccountUri"]};AccountKey={config["CosmosSettings:AccountKey"]};");
 
             return services;

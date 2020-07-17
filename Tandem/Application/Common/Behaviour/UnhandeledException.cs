@@ -4,7 +4,7 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Tandem.Application.Common.Behaviour
+namespace MicroservicesTemplateAPI.Application.Common.Behaviour
 {
     public class UnhandledExceptionBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
     {

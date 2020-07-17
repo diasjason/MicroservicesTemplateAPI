@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Tandem\Tandem.csproj" />
+    <ProjectReference Include="..\Tandem\MicroservicesTemplateAPI.csproj" />
   </ItemGroup>
 
 </Project>

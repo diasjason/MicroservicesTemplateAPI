@@ -4,10 +4,10 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Tandem.Application.Common.Behaviour;
-using Tandem.DataAccess;
+using MicroservicesTemplateAPI.Application.Common.Behaviour;
+using MicroservicesTemplateAPI.DataAccess;
 
-namespace Tandem
+namespace MicroservicesTemplateAPI
 {
     public class Startup
     {

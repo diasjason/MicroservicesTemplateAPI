@@ -2,10 +2,8 @@
 using System;
 using System.Linq;
 using System.Reflection;
-using Tandem.Application.User.Commands;
-using Tandem.Application.User.Queries;
 
-namespace Tandem.Application.Common.AutoMapper
+namespace MicroservicesTemplateAPI.Application.Common.AutoMapper
 {
     public class AutoMapping : Profile
     {

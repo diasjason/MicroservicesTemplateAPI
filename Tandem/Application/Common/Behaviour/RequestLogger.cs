@@ -3,7 +3,7 @@ using Microsoft.Extensions.Logging;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Tandem.Application.Common.Behaviour
+namespace MicroservicesTemplateAPI.Application.Common.Behaviour
 {
     public class RequestLogger<TRequest> : IRequestPreProcessor<TRequest>
     {

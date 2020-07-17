@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "Tandem": {
+    "MicroServicesTemplateAPI": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "weatherforecast",
