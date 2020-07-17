@@ -1,0 +1,10 @@
+version: '3'
+services:
+      
+  usermanagement:
+    image: tandem/usermanagement:1.0
+    build: Tandem
+    ports:
+      - "5100:5100"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
