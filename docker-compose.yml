@@ -2,8 +2,8 @@ version: '3'
 services:
       
   usermanagement:
-    image: tandem/usermanagement:1.0
-    build: Tandem
+    image: MicroservicesTemplateAPI/usermanagement:1.0
+    build: MicroservicesTemplateAPI
     ports:
       - "5100:5100"
     environment:

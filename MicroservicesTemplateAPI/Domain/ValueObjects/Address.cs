@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Tandem.Domain.ValueObjects
+namespace MicroservicesTemplateAPI.Domain.ValueObjects
 {
     public class Address : ValueObject
     {

@@ -35,8 +35,8 @@ namespace MicroservicesTemplateAPI.Test
         }
 
         [Theory]
-        [InlineData("mat@awesomedomain.com")]
-        [InlineData("madeup@gmail.com")]
+        [InlineData("test@used.email")]
+        [InlineData("created@contact.com")]
         public async Task Get_ByEmail_ReturnsCorrectContact(string email)
         {
             //Act
