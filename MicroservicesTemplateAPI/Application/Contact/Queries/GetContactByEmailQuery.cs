@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MicroservicesTemplateAPI.Application.Contact.Queries
 {
-    public class GetContactByEmailQuery:IRequest<ContactVm>
+    public class GetContactByEmailQuery : IRequest<ContactVm>
     {
         public string Email { get; set; }
     }

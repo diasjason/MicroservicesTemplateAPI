@@ -1,9 +1,9 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using MicroservicesTemplateAPI.Application.Common.Exceptions;
+using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
 using System;
 using System.Net;
 using System.Threading.Tasks;
-using MicroservicesTemplateAPI.Application.Common.Exceptions;
 
 namespace MicroservicesTemplateAPI.Application.Common.Behaviour
 {

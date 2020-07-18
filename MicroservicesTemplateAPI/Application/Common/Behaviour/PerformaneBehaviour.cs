@@ -29,7 +29,7 @@ namespace MicroservicesTemplateAPI.Application.Common.Behaviour
 
             if (elapsedMilliseconds > 500)
             {
-                var requestName = typeof(TRequest).Name;                
+                var requestName = typeof(TRequest).Name;
 
                 _logger.LogWarning("CleanArchitecture Long Running Request: {Name} ({ElapsedMilliseconds} milliseconds) {@Request}",
                     requestName, elapsedMilliseconds, request);

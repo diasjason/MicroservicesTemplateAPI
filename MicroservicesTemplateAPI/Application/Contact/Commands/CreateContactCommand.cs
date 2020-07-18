@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MicroservicesTemplateAPI.Application.Contact.Commands
 {
-    public class CreateContactCommand:IRequest<bool>,IMapFrom<Domain.Entities.Contact>
+    public class CreateContactCommand : IRequest<bool>, IMapFrom<Domain.Entities.Contact>
     {
         public string Name { get; set; }
         public string Company { get; set; }
@@ -19,10 +19,10 @@ namespace MicroservicesTemplateAPI.Application.Contact.Commands
         public string Email { get; set; }
         public string Type { get; set; }
         public string AssignedTo { get; set; }
-        public void Mapping(Profile profile) 
+        public void Mapping(Profile profile)
         {
             profile.CreateMap<CreateContactCommand, Domain.Entities.Contact>(MemberList.Source)
-                .ForMember(d => d.Id, opt => opt.MapFrom(s => Guid.NewGuid().ToString()));            
+                .ForMember(d => d.Id, opt => opt.MapFrom(s => Guid.NewGuid().ToString()));
         }
     }
     public class CreateContactCommandHandler : IRequestHandler<CreateContactCommand, bool>

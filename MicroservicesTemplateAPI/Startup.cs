@@ -1,11 +1,11 @@
 using AutoMapper;
+using MicroservicesTemplateAPI.Application.Common.Behaviour;
+using MicroservicesTemplateAPI.Infrastructure.Persistence;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using MicroservicesTemplateAPI.Application.Common.Behaviour;
-using MicroservicesTemplateAPI.Infrastructure.Persistence;
 
 namespace MicroservicesTemplateAPI
 {

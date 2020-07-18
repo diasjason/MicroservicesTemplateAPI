@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
-using MicroservicesTemplateAPI.Application.Contact.Commands;
+﻿using MicroservicesTemplateAPI.Application.Contact.Commands;
 using MicroservicesTemplateAPI.Application.Contact.Queries;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace MicroservicesTemplateAPI.Controllers
 {
@@ -19,7 +19,7 @@ namespace MicroservicesTemplateAPI.Controllers
         [HttpGet("{email}")]
         public async Task<ContactVm> Get(string email)
         {
-            return await Mediator.Send(new GetContactByEmailQuery { Email=email});
+            return await Mediator.Send(new GetContactByEmailQuery { Email = email });
         }
 
         [HttpPost]
@@ -31,7 +31,7 @@ namespace MicroservicesTemplateAPI.Controllers
         [HttpPut("{email}")]
         public async Task<bool> Update(string email, UpdateContactCommand command)
         {
-            return await Mediator.Send(command);            
+            return await Mediator.Send(command);
         }
     }
 }

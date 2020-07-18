@@ -2,7 +2,7 @@
 
 namespace MicroservicesTemplateAPI.Application.Contact.Queries
 {
-    public class GetContactByEmailValidator:AbstractValidator<GetContactByEmailQuery>
+    public class GetContactByEmailValidator : AbstractValidator<GetContactByEmailQuery>
     {
         public GetContactByEmailValidator()
         {

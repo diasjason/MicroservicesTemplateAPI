@@ -2,7 +2,7 @@
 
 namespace MicroservicesTemplateAPI.Application.Contact.Commands
 {
-    public class CreateContactValidator:AbstractValidator<CreateContactCommand>
+    public class CreateContactValidator : AbstractValidator<CreateContactCommand>
     {
         public CreateContactValidator()
         {

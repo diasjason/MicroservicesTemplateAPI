@@ -1,9 +1,9 @@
 ﻿using Cosmonaut;
 using Cosmonaut.Extensions.Microsoft.DependencyInjection;
+using MicroservicesTemplateAPI.Domain.Entities;
 using Microsoft.Azure.Documents.Client;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using MicroservicesTemplateAPI.Domain.Entities;
 
 namespace MicroservicesTemplateAPI.Infrastructure.Persistence
 {

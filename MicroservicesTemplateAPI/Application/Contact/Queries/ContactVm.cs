@@ -3,7 +3,7 @@ using MicroservicesTemplateAPI.Application.Common.AutoMapper;
 
 namespace MicroservicesTemplateAPI.Application.Contact.Queries
 {
-    public class ContactVm:IMapFrom<Domain.Entities.Contact>
+    public class ContactVm : IMapFrom<Domain.Entities.Contact>
     {
         public string ContactId { get; set; }
         public string Name { get; set; }

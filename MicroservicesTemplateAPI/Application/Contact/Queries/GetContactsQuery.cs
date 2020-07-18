@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MicroservicesTemplateAPI.Application.Contact.Queries
 {
-    public class GetContactsQuery:IRequest<List<ContactVm>>
+    public class GetContactsQuery : IRequest<List<ContactVm>>
     {
         public class GetContactsQueryHandler : IRequestHandler<GetContactsQuery, List<ContactVm>>
         {

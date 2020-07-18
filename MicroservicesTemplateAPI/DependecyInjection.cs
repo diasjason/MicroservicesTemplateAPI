@@ -1,10 +1,10 @@
 ﻿using AutoMapper;
 using FluentValidation;
 using MediatR;
-using Microsoft.Extensions.DependencyInjection;
-using System.Reflection;
 using MicroservicesTemplateAPI.Application.Common.Behaviour;
 using MicroservicesTemplateAPI.Infrastructure.Persistence;
+using Microsoft.Extensions.DependencyInjection;
+using System.Reflection;
 
 namespace MicroservicesTemplateAPI
 {
@@ -18,8 +18,8 @@ namespace MicroservicesTemplateAPI
             services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(UnhandledExceptionBehaviour<,>));
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(RequestValidationBehavior<,>));
-            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(PerformanceBehaviour<,>));       
-            
+            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(PerformanceBehaviour<,>));
+
             return services;
         }
     }

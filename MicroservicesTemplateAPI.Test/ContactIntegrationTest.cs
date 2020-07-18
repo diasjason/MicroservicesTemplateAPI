@@ -2,11 +2,9 @@
 using MicroservicesTemplateAPI.Application.Contact.Queries;
 using MicroservicesTemplateAPI.Domain.Entities;
 using Microsoft.AspNetCore.Mvc.Testing;
-using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -14,7 +12,7 @@ namespace MicroservicesTemplateAPI.Test
 {
     public class ContactIntegrationTest
     {
-        public readonly HttpClient _client; 
+        public readonly HttpClient _client;
         public ContactIntegrationTest()
         {
             var appFactory = new WebApplicationFactory<Startup>();
@@ -55,8 +53,18 @@ namespace MicroservicesTemplateAPI.Test
         {
             //Arrange
             var email = "created@contact.com";
-            var newContact = new Contact { Name = "Name", Company = "Microsoft", StreetAddress = "Middle", City="Mumbai", State="MH", 
-                Phone = "111-222-3333", Email = email, Type="dev", AssignedTo="PT" };
+            var newContact = new Contact
+            {
+                Name = "Name",
+                Company = "Microsoft",
+                StreetAddress = "Middle",
+                City = "Mumbai",
+                State = "MH",
+                Phone = "111-222-3333",
+                Email = email,
+                Type = "dev",
+                AssignedTo = "PT"
+            };
             await _client.PostAsJsonAsync("api/contact", newContact);
 
             //Act
@@ -92,8 +100,15 @@ namespace MicroservicesTemplateAPI.Test
             //Arrange
             var contact = new Contact
             {
-                Name = "Name", Company = "Microsoft", StreetAddress = "Middle", City = "Mumbai", State = "MH",
-                Phone = "111-222-3333", Email = "test@used.email", Type = "dev", AssignedTo = "PT"
+                Name = "Name",
+                Company = "Microsoft",
+                StreetAddress = "Middle",
+                City = "Mumbai",
+                State = "MH",
+                Phone = "111-222-3333",
+                Email = "test@used.email",
+                Type = "dev",
+                AssignedTo = "PT"
             };
 
             //Act
@@ -111,8 +126,15 @@ namespace MicroservicesTemplateAPI.Test
             //Arrange
             var contact = new Contact
             {
-                Name = "Name", Company = "Microsoft", StreetAddress = "Middle", City = "Mumbai",
-                State = "MH", Phone = "111-222-3333", Email = "tesemail", Type = "dev", AssignedTo = "PT"
+                Name = "Name",
+                Company = "Microsoft",
+                StreetAddress = "Middle",
+                City = "Mumbai",
+                State = "MH",
+                Phone = "111-222-3333",
+                Email = "tesemail",
+                Type = "dev",
+                AssignedTo = "PT"
             };
             //Act
             var response = await _client.PostAsJsonAsync("api/contact", contact);

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MicroservicesTemplateAPI.Application.Contact.Commands
 {
-    public class UpdateContactCommand: IRequest<bool>, IMapFrom<Domain.Entities.Contact>
+    public class UpdateContactCommand : IRequest<bool>, IMapFrom<Domain.Entities.Contact>
     {
         public string Email { get; set; }
         public string Name { get; set; }
@@ -24,7 +24,7 @@ namespace MicroservicesTemplateAPI.Application.Contact.Commands
             profile.CreateMap<UpdateContactCommand, Domain.Entities.Contact>(MemberList.Source);
         }
     }
-    public class UpdateContactCommandHandler : IRequestHandler<UpdateContactCommand,bool>
+    public class UpdateContactCommandHandler : IRequestHandler<UpdateContactCommand, bool>
     {
         private readonly IContactService _contactService;
         private readonly IMapper _mapper;
@@ -45,7 +45,7 @@ namespace MicroservicesTemplateAPI.Application.Contact.Commands
             }
             var contact = _mapper.Map<Domain.Entities.Contact>(request);
 
-            return await _contactService.PutContact(contact);            
+            return await _contactService.PutContact(contact);
         }
     }
 }
