@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using MediatR;
-using MicroservicesTemplateAPI.DataAccess;
+using MicroservicesTemplateAPI.Infrastructure.Persistence;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;

@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using MediatR;
 using MicroservicesTemplateAPI.Application.Common.Exceptions;
-using MicroservicesTemplateAPI.DataAccess;
+using MicroservicesTemplateAPI.Infrastructure.Persistence;
 using System.Threading;
 using System.Threading.Tasks;
 

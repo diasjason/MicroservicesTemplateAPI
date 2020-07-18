@@ -4,7 +4,7 @@ using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 using MicroservicesTemplateAPI.Application.Common.Behaviour;
-using MicroservicesTemplateAPI.DataAccess;
+using MicroservicesTemplateAPI.Infrastructure.Persistence;
 
 namespace MicroservicesTemplateAPI
 {

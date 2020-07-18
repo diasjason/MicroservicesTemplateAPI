@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace MicroservicesTemplateAPI.DataAccess
+namespace MicroservicesTemplateAPI.Infrastructure.Persistence
 {
     public class CosmosContactService : IContactService
     {

@@ -5,7 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using MicroservicesTemplateAPI.Domain.Entities;
 
-namespace MicroservicesTemplateAPI.DataAccess
+namespace MicroservicesTemplateAPI.Infrastructure.Persistence
 {
     public static class CosmosInstaller
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace MicroservicesTemplateAPI.DataAccess
+namespace MicroservicesTemplateAPI.Infrastructure.Persistence
 {
     public interface IContactService
     {
