@@ -20,6 +20,8 @@ namespace MicroservicesTemplateAPI.Application.Common.Behaviour
 
             _logger.LogInformation(".Net Cosmos Request: {@Name} {@Request}",
                 requestName, request);
+
+            await Task.CompletedTask;
         }
     }
 }
