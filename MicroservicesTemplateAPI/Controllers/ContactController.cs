@@ -28,8 +28,8 @@ namespace MicroservicesTemplateAPI.Controllers
             return await Mediator.Send(command);
         }
 
-        [HttpPut("{email}")]
-        public async Task<bool> Update(string email, UpdateContactCommand command)
+        [HttpPut]
+        public async Task<bool> Update(UpdateContactCommand command)
         {
             return await Mediator.Send(command);
         }
