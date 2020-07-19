@@ -5,7 +5,7 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <Copyright>2020</Copyright>
-    <SignAssembly>false</SignAssembly>
+    <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>MicroserviceTemplateHelper.pfx</AssemblyOriginatorKeyFile>
     <DelaySign>false</DelaySign>
     <Description>This is Helper Library</Description>
@@ -14,9 +14,9 @@
     <Product>Microservice Helpers</Product>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageTags>MSHelper</PackageTags>
-    <AssemblyVersion>1.0.0.1</AssemblyVersion>
-    <FileVersion>1.0.0.1</FileVersion>
-    <Version>1.0.1</Version>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <FileVersion>2.0.0.0</FileVersion>
+    <Version>2.0.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
@@ -24,6 +24,7 @@
     <PackageReference Include="FluentValidation" Version="8.6.2" />
     <PackageReference Include="MediatR" Version="8.0.2" />
     <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="3.1.6" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
   </ItemGroup>
