@@ -1,4 +1,5 @@
-﻿using MicroservicesTemplateAPI.Application.Contact.Commands;
+﻿using MicroservicesTemplate.Common.Controller;
+using MicroservicesTemplateAPI.Application.Contact.Commands;
 using MicroservicesTemplateAPI.Application.Contact.Queries;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
@@ -6,8 +7,6 @@ using System.Threading.Tasks;
 
 namespace MicroservicesTemplateAPI.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
     public class ContactController : ApiController
     {
         [HttpGet]

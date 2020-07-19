@@ -1,5 +1,5 @@
 using AutoMapper;
-using MicroservicesTemplateAPI.Application.Common.Behaviour;
+using MicroservicesTemplate.Common.Behaviour;
 using MicroservicesTemplateAPI.Infrastructure.Persistence;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
