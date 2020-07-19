@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace MicroservicesTemplateAPI.Application.Common.Exceptions
+namespace MicroservicesTemplate.Common.Exceptions
 {
     public class ValidationException : Exception
     {

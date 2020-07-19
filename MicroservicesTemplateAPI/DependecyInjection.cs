@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using FluentValidation;
 using MediatR;
-using MicroservicesTemplateAPI.Application.Common.Behaviour;
+using MicroservicesTemplate.Common.Behaviour;
 using MicroservicesTemplateAPI.Infrastructure.Persistence;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;

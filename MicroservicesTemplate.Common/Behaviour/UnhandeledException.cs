@@ -4,7 +4,7 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace MicroservicesTemplateAPI.Application.Common.Behaviour
+namespace MicroservicesTemplate.Common.Behaviour
 {
     public class UnhandledExceptionBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
     {

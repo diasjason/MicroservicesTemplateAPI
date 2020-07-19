@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MicroservicesTemplateAPI.Application.Common.Exceptions
+namespace MicroservicesTemplate.Common.Exceptions
 {
     public class NotFoundException : Exception
     {

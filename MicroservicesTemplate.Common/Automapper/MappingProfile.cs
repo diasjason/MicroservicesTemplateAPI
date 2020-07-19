@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using MicroservicesTemplate.Common.Automapper;
 using System;
 using System.Linq;
 using System.Reflection;

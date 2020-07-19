@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using ValidationException = MicroservicesTemplateAPI.Application.Common.Exceptions.ValidationException;
+using ValidationException = MicroservicesTemplate.Common.Exceptions.ValidationException;
 
-namespace MicroservicesTemplateAPI.Application.Common.Behaviour
+namespace MicroservicesTemplate.Common.Behaviour
 {
     public class RequestValidationBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
         where TRequest : IRequest<TResponse>

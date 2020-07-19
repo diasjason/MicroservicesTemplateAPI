@@ -1,11 +1,11 @@
-﻿using MicroservicesTemplateAPI.Application.Common.Exceptions;
+﻿using MicroservicesTemplate.Common.Exceptions;
 using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
 using System;
 using System.Net;
 using System.Threading.Tasks;
 
-namespace MicroservicesTemplateAPI.Application.Common.Behaviour
+namespace MicroservicesTemplate.Common.Behaviour
 {
     public class ErrorHandlingMiddleware
     {
