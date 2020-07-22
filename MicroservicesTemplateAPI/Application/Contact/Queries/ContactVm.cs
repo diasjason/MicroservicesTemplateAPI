@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using MicroservicesTemplate.Common.Automapper;
+using MicroservicesTemplateAPI.Automapper;
 
 namespace MicroservicesTemplateAPI.Application.Contact.Queries
 {
