@@ -37,9 +37,9 @@ namespace MicroservicesTemplateAPI.Application.Contact.Commands
         }
         public async Task<bool> Handle(CreateContactCommand request, CancellationToken cancellationToken)
         {
-            var Contact = _mapper.Map<Domain.Entities.Contact>(request);
+            var contact = _mapper.Map<Domain.Entities.Contact>(request);
 
-            return await _contactService.PostContact(Contact);
+            return await _contactService.PostContact(contact);
         }
     }
 }
