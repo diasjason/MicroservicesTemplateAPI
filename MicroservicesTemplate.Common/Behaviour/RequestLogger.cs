@@ -18,7 +18,7 @@ namespace MicroservicesTemplate.Common.Behaviour
         {
             var requestName = typeof(TRequest).Name;
 
-            _logger.LogInformation(".Net Cosmos Request: {@Name} {@Request}",
+            _logger.LogInformation("Request: {@Name} {@Request}",
                 requestName, request);
 
             await Task.CompletedTask;

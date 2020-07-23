@@ -31,7 +31,7 @@ namespace MicroservicesTemplate.Common.Behaviour
             {
                 var requestName = typeof(TRequest).Name;
 
-                _logger.LogWarning("CleanArchitecture Long Running Request: {Name} ({ElapsedMilliseconds} milliseconds) {@Request}",
+                _logger.LogWarning("Long Running Request: {Name} ({ElapsedMilliseconds} milliseconds) {@Request}",
                     requestName, elapsedMilliseconds, request);
             }
 
