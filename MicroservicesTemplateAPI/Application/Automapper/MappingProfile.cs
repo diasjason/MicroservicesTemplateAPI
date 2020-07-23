@@ -1,9 +1,9 @@
-﻿using AutoMapper;
-using System;
+﻿using System;
 using System.Linq;
 using System.Reflection;
+using AutoMapper;
 
-namespace MicroservicesTemplateAPI.Automapper
+namespace MicroservicesTemplateAPI.Application.Automapper
 {
     public class AutoMapping : Profile
     {

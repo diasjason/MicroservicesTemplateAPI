@@ -1,10 +1,10 @@
 ﻿using AutoMapper;
 using MediatR;
-using MicroservicesTemplateAPI.Automapper;
 using MicroservicesTemplateAPI.Infrastructure.Persistence;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+using MicroservicesTemplateAPI.Application.Automapper;
 
 namespace MicroservicesTemplateAPI.Application.Contact.Commands
 {

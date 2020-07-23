@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 
-namespace MicroservicesTemplateAPI.Automapper
+namespace MicroservicesTemplateAPI.Application.Automapper
 {
     public interface IMapFrom<T>
     {

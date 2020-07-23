@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroservicesTemplateAPI", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroservicesTemplateAPI.IntegrationTest", "MicroservicesTemplateAPI.Test\MicroservicesTemplateAPI.IntegrationTest.csproj", "{1C5F932C-FE7D-4905-A661-7BEE86C4AA1D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroservicesTemplate.Common", "MicroservicesTemplate.Common\MicroservicesTemplate.Common.csproj", "{5E97B0E6-6F5E-4F3F-A560-BD25343E6B88}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroservicesTemplate.Common", "MicroservicesTemplate.Common\MicroservicesTemplate.Common.csproj", "{5EBB378C-CDC3-4D2F-8E17-F8717DEB4448}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{1C5F932C-FE7D-4905-A661-7BEE86C4AA1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C5F932C-FE7D-4905-A661-7BEE86C4AA1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C5F932C-FE7D-4905-A661-7BEE86C4AA1D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5E97B0E6-6F5E-4F3F-A560-BD25343E6B88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5E97B0E6-6F5E-4F3F-A560-BD25343E6B88}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5E97B0E6-6F5E-4F3F-A560-BD25343E6B88}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5E97B0E6-6F5E-4F3F-A560-BD25343E6B88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EBB378C-CDC3-4D2F-8E17-F8717DEB4448}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EBB378C-CDC3-4D2F-8E17-F8717DEB4448}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EBB378C-CDC3-4D2F-8E17-F8717DEB4448}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EBB378C-CDC3-4D2F-8E17-F8717DEB4448}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
