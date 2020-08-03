@@ -1,5 +1,4 @@
 using AutoMapper;
-using MicroservicesTemplate.Common.Behaviour;
 using MicroservicesTemplateAPI.Infrastructure.Persistence;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -60,7 +59,7 @@ namespace MicroservicesTemplateAPI
 
             app.UseRouting();
 
-            app.UseMiddleware(typeof(ErrorHandlingMiddleware));
+            app.UseExceptionHandling();
 
             app.UseEndpoints(endpoints =>
             {

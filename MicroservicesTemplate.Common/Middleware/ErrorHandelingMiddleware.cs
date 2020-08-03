@@ -5,7 +5,7 @@ using System;
 using System.Net;
 using System.Threading.Tasks;
 
-namespace MicroservicesTemplate.Common.Behaviour
+namespace MicroservicesTemplate.Common.Middleware
 {
     public class ErrorHandlingMiddleware
     {
