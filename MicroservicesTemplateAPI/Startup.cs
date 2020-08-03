@@ -27,6 +27,7 @@ namespace MicroservicesTemplateAPI
             services.AddDependencies();
             services.AddAutoMapper(typeof(Startup));
             services.AddControllers();
+            services.AddHealthChecks();
 
             services.AddOpenApiDocument(configure =>
             {
@@ -41,6 +42,16 @@ namespace MicroservicesTemplateAPI
 
                 configure.OperationProcessors.Add(new AspNetCoreOperationSecurityScopeProcessor("JWT"));
             });
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy(
+                    "LocalCorsPolicy",
+                    builder => builder.WithOrigins("http://localhost:4200")
+                        .AllowAnyMethod()
+                        .AllowAnyHeader()
+                        .AllowCredentials());
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -48,6 +59,7 @@ namespace MicroservicesTemplateAPI
         {
             if (env.IsDevelopment())
             {
+                app.UseCors("LocalCorsPolicy");
                 app.UseDeveloperExceptionPage();
             }
 
@@ -63,6 +75,7 @@ namespace MicroservicesTemplateAPI
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapHealthChecks("/hc");
                 endpoints.MapControllers();
             });
         }
