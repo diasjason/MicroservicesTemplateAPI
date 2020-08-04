@@ -8,6 +8,7 @@ using Microsoft.Extensions.Hosting;
 using NSwag;
 using NSwag.Generation.Processors.Security;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 
 namespace MicroservicesTemplateAPI
 {
@@ -24,6 +25,7 @@ namespace MicroservicesTemplateAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddCosmos(Configuration);
+            services.AddDbContext<DataContext>(item => item.UseSqlServer(Configuration.GetConnectionString("myconn")));
             services.AddDependencies();
             services.AddAutoMapper(typeof(Startup));
             services.AddControllers();
@@ -72,6 +74,7 @@ namespace MicroservicesTemplateAPI
             app.UseRouting();
 
             app.UseExceptionHandling();
+            //app.UseExceptionHandler();
 
             app.UseEndpoints(endpoints =>
             {
