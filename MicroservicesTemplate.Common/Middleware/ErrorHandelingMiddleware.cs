@@ -31,11 +31,17 @@ namespace MicroservicesTemplate.Common.Middleware
         {
             //default error code
             var code = HttpStatusCode.InternalServerError;
+            string resultString = null;
 
             if (ex is NotFoundException) code = HttpStatusCode.NotFound;
-            else if (ex is ValidationException) code = HttpStatusCode.BadRequest;
+            else if (ex is ValidationException validationException)
+            {
+                var error = validationException.Errors;
+                code = HttpStatusCode.BadRequest;
+                resultString = JsonConvert.SerializeObject(new { message = validationException.Message, validationException.Errors });
+            }
 
-            var result = JsonConvert.SerializeObject(new { error = ex.Message });
+            var result = resultString ?? JsonConvert.SerializeObject(new { error = ex.Message });
             context.Response.ContentType = "application/json";
             context.Response.StatusCode = (int)code;
             return context.Response.WriteAsync(result);
