@@ -9,6 +9,9 @@ using NSwag;
 using NSwag.Generation.Processors.Security;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
+using ZymLabs.NSwag.FluentValidation;
+using ZymLabs.NSwag.FluentValidation.AspNetCore;
+using FluentValidation.AspNetCore;
 
 namespace MicroservicesTemplateAPI
 {
@@ -28,11 +31,25 @@ namespace MicroservicesTemplateAPI
             services.AddDbContext<DataContext>(item => item.UseSqlServer(Configuration.GetConnectionString("myconn")));
             services.AddDependencies();
             services.AddAutoMapper(typeof(Startup));
-            services.AddControllers();
+
+            services
+                .AddControllers()
+
+                .AddFluentValidation(c =>
+                {
+                    c.RegisterValidatorsFromAssemblyContaining<Startup>();
+
+                    c.ValidatorFactoryType = typeof(HttpContextServiceProviderValidatorFactory);
+                });
+
             services.AddHealthChecks();
 
-            services.AddOpenApiDocument(configure =>
+            services.AddOpenApiDocument((configure, serviceProvider) =>
             {
+                var fluentValidationSchemaProcessor = serviceProvider.GetService<FluentValidationSchemaProcessor>();
+
+                // Add the fluent validations schema processor
+                configure.SchemaProcessors.Add(fluentValidationSchemaProcessor);
                 configure.Title = "MicroservicesTemplateAPI API";
                 configure.AddSecurity("JWT", Enumerable.Empty<string>(), new OpenApiSecurityScheme
                 {
@@ -44,6 +61,8 @@ namespace MicroservicesTemplateAPI
 
                 configure.OperationProcessors.Add(new AspNetCoreOperationSecurityScopeProcessor("JWT"));
             });
+
+            services.AddSingleton<FluentValidationSchemaProcessor>();
 
             services.AddCors(options =>
             {
