@@ -14,7 +14,6 @@ namespace MicroservicesTemplateAPI
         {
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
             services.AddMediatR(Assembly.GetExecutingAssembly());
-            services.AddSingleton<IContactService, CosmosContactService>();
             services.AddTransient<IStudentService,StudentService>();
             services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(UnhandledExceptionBehaviour<,>));
