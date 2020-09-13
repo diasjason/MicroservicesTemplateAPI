@@ -2,7 +2,7 @@
   "x-generator": "NSwag v13.7.0.0 (NJsonSchema v10.1.24.0 (Newtonsoft.Json v12.0.0.0))",
   "openapi": "3.0.0",
   "info": {
-    "title": "MicroservicesTemplateAPI API",
+    "title": "NSwag.AspNetCore.Launcher",
     "version": "1.0.0"
   },
   "paths": {
@@ -169,38 +169,55 @@
       "CreateStudentCommand": {
         "type": "object",
         "additionalProperties": false,
+        "required": [
+          "name",
+          "streetAddress",
+          "city",
+          "state",
+          "phone",
+          "type",
+          "assignedTo"
+        ],
         "properties": {
           "name": {
             "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "nullable": false
           },
           "streetAddress": {
             "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "nullable": false
           },
           "city": {
             "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "nullable": false
           },
           "state": {
             "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "nullable": false
           },
           "phone": {
             "type": "string",
-            "nullable": true
+            "minLength": 10,
+            "nullable": false
           },
           "email": {
             "type": "string",
+            "pattern": "^[^@]+@[^@]+$",
             "nullable": true
           },
           "type": {
             "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "nullable": false
           },
           "assignedTo": {
             "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "nullable": false
           }
         }
       },
