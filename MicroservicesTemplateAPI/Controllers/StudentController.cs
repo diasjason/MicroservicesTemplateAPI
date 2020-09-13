@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
-using MicroservicesTemplate.Common.Controller;
+﻿using MicroservicesTemplate.Common.Controller;
 using MicroservicesTemplateAPI.Application.Student.Commands;
 using MicroservicesTemplateAPI.Application.Student.Queries;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace MicroservicesTemplateAPI.Controllers
 {

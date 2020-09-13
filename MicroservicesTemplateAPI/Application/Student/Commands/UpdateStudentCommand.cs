@@ -1,10 +1,10 @@
 ﻿using AutoMapper;
 using MediatR;
-using MicroservicesTemplate.Common.Exceptions;
-using MicroservicesTemplateAPI.Infrastructure.Persistence;
+using MicroservicesTemplateAPI.Application.Automapper;
+using MicroservicesTemplateAPI.Infrastructure.Persistence.Commands;
 using System.Threading;
 using System.Threading.Tasks;
-using MicroservicesTemplateAPI.Application.Automapper;
+using MicroservicesTemplate.Common.Exceptions;
 
 namespace MicroservicesTemplateAPI.Application.Student.Commands
 {
@@ -25,10 +25,10 @@ namespace MicroservicesTemplateAPI.Application.Student.Commands
     }
     public class UpdateStudentCommandHandler : IRequestHandler<UpdateStudentCommand, bool>
     {
-        private readonly IStudentService _studentService;
+        private readonly IStudentDataAccessCommands _studentService;
         private readonly IMapper _mapper;
 
-        public UpdateStudentCommandHandler(IStudentService studentService, IMapper mapper)
+        public UpdateStudentCommandHandler(IStudentDataAccessCommands studentService, IMapper mapper)
         {
             _studentService = studentService;
             _mapper = mapper;
@@ -36,15 +36,13 @@ namespace MicroservicesTemplateAPI.Application.Student.Commands
 
         public async Task<bool> Handle(UpdateStudentCommand request, CancellationToken cancellationToken)
         {
-            var entity = await _studentService.GetStudentByEmailAsync(request.Email);
-
-            if (entity == null)
+            if (!await _studentService.StudentExists(request.Email))
             {
-                throw new NotFoundException(nameof(Student), request.Email);
+                throw new NotFoundException(nameof(Domain.Entities.Student), request.Email);
             }
-            var student = _mapper.Map<Domain.Entities.Student>(request);
 
-            return await _studentService.PutStudent(student);
+            var student = _mapper.Map<Domain.Entities.Student>(request);
+            return await _studentService.UpdateStudent(student);
         }
     }
 }

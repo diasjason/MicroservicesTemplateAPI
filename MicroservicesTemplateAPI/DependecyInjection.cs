@@ -2,7 +2,8 @@
 using FluentValidation;
 using MediatR;
 using MicroservicesTemplate.Common.Behaviour;
-using MicroservicesTemplateAPI.Infrastructure.Persistence;
+using MicroservicesTemplateAPI.Infrastructure.Persistence.Commands;
+using MicroservicesTemplateAPI.Infrastructure.Persistence.Queries;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 
@@ -14,7 +15,8 @@ namespace MicroservicesTemplateAPI
         {
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
             services.AddMediatR(Assembly.GetExecutingAssembly());
-            services.AddTransient<IStudentService,StudentService>();
+            services.AddTransient<IStudentDataAccessCommands, StudentDataAccessCommands>();
+            services.AddTransient<IStudentDataAccessQueries, StudentDataAccessQueries>();
             services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(UnhandledExceptionBehaviour<,>));
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(RequestValidationBehavior<,>));

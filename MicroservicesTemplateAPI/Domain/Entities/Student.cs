@@ -2,7 +2,7 @@
 
 namespace MicroservicesTemplateAPI.Domain.Entities
 {
-    public class Student:AuditableEntity
+    public class Student : AuditableEntity
     {
         public string StudentId { get; set; }
         public string Name { get; set; }

@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using MediatR;
-using MicroservicesTemplateAPI.Infrastructure.Persistence;
+using MicroservicesTemplateAPI.Infrastructure.Persistence.Queries;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
@@ -13,10 +13,10 @@ namespace MicroservicesTemplateAPI.Application.Student.Queries
 
     public class GetStudentsQueryHandler : IRequestHandler<GetStudentsQuery, List<StudentVm>>
     {
-        private readonly IStudentService _studentService;
+        private readonly IStudentDataAccessQueries _studentService;
         private readonly IMapper _mapper;
 
-        public GetStudentsQueryHandler(IStudentService studentService, IMapper mapper)
+        public GetStudentsQueryHandler(IStudentDataAccessQueries studentService, IMapper mapper)
         {
             _studentService = studentService;
             _mapper = mapper;

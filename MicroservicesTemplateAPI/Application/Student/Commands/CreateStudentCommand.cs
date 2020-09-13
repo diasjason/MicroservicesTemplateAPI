@@ -1,10 +1,10 @@
 ﻿using AutoMapper;
 using MediatR;
-using MicroservicesTemplateAPI.Infrastructure.Persistence;
+using MicroservicesTemplateAPI.Application.Automapper;
+using MicroservicesTemplateAPI.Infrastructure.Persistence.Commands;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
-using MicroservicesTemplateAPI.Application.Automapper;
 
 namespace MicroservicesTemplateAPI.Application.Student.Commands
 {
@@ -26,10 +26,10 @@ namespace MicroservicesTemplateAPI.Application.Student.Commands
     }
     public class CreateStudentCommandHandler : IRequestHandler<CreateStudentCommand, bool>
     {
-        private readonly IStudentService _studentService;
+        private readonly IStudentDataAccessCommands _studentService;
         private readonly IMapper _mapper;
 
-        public CreateStudentCommandHandler(IStudentService studentService, IMapper mapper)
+        public CreateStudentCommandHandler(IStudentDataAccessCommands studentService, IMapper mapper)
         {
             _studentService = studentService;
             _mapper = mapper;
@@ -38,7 +38,7 @@ namespace MicroservicesTemplateAPI.Application.Student.Commands
         {
             var student = _mapper.Map<Domain.Entities.Student>(request);
 
-            return await _studentService.PostStudent(student);
+            return await _studentService.AddStudent(student);
         }
     }
 }

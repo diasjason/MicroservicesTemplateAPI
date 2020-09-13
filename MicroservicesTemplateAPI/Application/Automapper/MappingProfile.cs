@@ -1,7 +1,7 @@
-﻿using System;
+﻿using AutoMapper;
+using System;
 using System.Linq;
 using System.Reflection;
-using AutoMapper;
 
 namespace MicroservicesTemplateAPI.Application.Automapper
 {

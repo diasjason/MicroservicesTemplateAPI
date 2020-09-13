@@ -1,17 +1,17 @@
 using AutoMapper;
+using FluentValidation.AspNetCore;
 using MicroservicesTemplateAPI.Infrastructure.Persistence;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using NSwag;
 using NSwag.Generation.Processors.Security;
 using System.Linq;
-using Microsoft.EntityFrameworkCore;
 using ZymLabs.NSwag.FluentValidation;
 using ZymLabs.NSwag.FluentValidation.AspNetCore;
-using FluentValidation.AspNetCore;
 
 namespace MicroservicesTemplateAPI
 {

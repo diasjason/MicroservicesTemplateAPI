@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using MediatR;
 using MicroservicesTemplate.Common.Exceptions;
-using MicroservicesTemplateAPI.Infrastructure.Persistence;
+using MicroservicesTemplateAPI.Infrastructure.Persistence.Queries;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -13,10 +13,10 @@ namespace MicroservicesTemplateAPI.Application.Student.Queries
     }
     public class GetStudentByEmailHandler : IRequestHandler<GetStudentByEmailQuery, StudentVm>
     {
-        private readonly IStudentService _studentService;
+        private readonly IStudentDataAccessQueries _studentService;
         private readonly IMapper _mapper;
 
-        public GetStudentByEmailHandler(IStudentService studentService, IMapper mapper)
+        public GetStudentByEmailHandler(IStudentDataAccessQueries studentService, IMapper mapper)
         {
             _studentService = studentService;
             _mapper = mapper;
