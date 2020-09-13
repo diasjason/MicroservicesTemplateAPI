@@ -1,8 +1,7 @@
-﻿using System.Linq;
-using MicroservicesTemplateAPI.Domain.Entities;
-using System.Threading.Tasks;
-using MicroservicesTemplateAPI.Infrastructure.Persistence.Queries;
+﻿using MicroservicesTemplateAPI.Domain.Entities;
+using MicroservicesTemplateAPI.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
+using System.Threading.Tasks;
 
 namespace MicroservicesTemplateAPI.Infrastructure.Persistence.Commands
 {

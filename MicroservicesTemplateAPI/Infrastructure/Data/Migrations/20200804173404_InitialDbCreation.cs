@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 using System;
 
-namespace MicroservicesTemplateAPI.Migrations
+namespace MicroservicesTemplateAPI.Infrastructure.Data.Migrations
 {
     public partial class InitialDbCreation : Migration
     {

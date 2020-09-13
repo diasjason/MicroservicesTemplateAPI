@@ -1,4 +1,5 @@
 ﻿using MicroservicesTemplateAPI.Domain.Entities;
+using MicroservicesTemplateAPI.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;

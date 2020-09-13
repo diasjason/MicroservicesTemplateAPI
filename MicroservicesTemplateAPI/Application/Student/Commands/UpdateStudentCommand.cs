@@ -1,10 +1,10 @@
 ﻿using AutoMapper;
 using MediatR;
+using MicroservicesTemplate.Common.Exceptions;
 using MicroservicesTemplateAPI.Application.Automapper;
 using MicroservicesTemplateAPI.Infrastructure.Persistence.Commands;
 using System.Threading;
 using System.Threading.Tasks;
-using MicroservicesTemplate.Common.Exceptions;
 
 namespace MicroservicesTemplateAPI.Application.Student.Commands
 {
