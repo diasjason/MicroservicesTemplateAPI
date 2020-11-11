@@ -1,4 +1,4 @@
-using System.Linq;
+﻿using System.Linq;
 using System.Reflection;
 using Microsoft.Extensions.DependencyInjection;
 using NSwag;
@@ -18,7 +18,7 @@ namespace Microsoft.AspNetCore.Builder
                 // Add the fluent validations schema processor
                 configure.SchemaProcessors.Add(fluentValidationSchemaProcessor);
                 configure.Title = Assembly.GetEntryAssembly()?.GetName().Name;
-                
+
             });
 
             services.AddSingleton<FluentValidationSchemaProcessor>();
