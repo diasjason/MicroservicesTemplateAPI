@@ -43,26 +43,11 @@ namespace MicroservicesTemplateAPI
 
             services.AddHealthChecks();
 
-            services.AddOpenApiDocument((configure, serviceProvider) =>
-            {
-                var fluentValidationSchemaProcessor = serviceProvider.GetService<FluentValidationSchemaProcessor>();
-
-                // Add the fluent validations schema processor
-                configure.SchemaProcessors.Add(fluentValidationSchemaProcessor);
-                configure.Title = "MicroservicesTemplateAPI API";
-                configure.AddSecurity("JWT", Enumerable.Empty<string>(), new OpenApiSecurityScheme
-                {
-                    Type = OpenApiSecuritySchemeType.ApiKey,
-                    Name = "Authorization",
-                    In = OpenApiSecurityApiKeyLocation.Header,
-                    Description = "Type into the textbox: Bearer {your JWT token}."
-                });
-
-                configure.OperationProcessors.Add(new AspNetCoreOperationSecurityScopeProcessor("JWT"));
-            });
-
-            services.AddSingleton<FluentValidationSchemaProcessor>();
-
+            //flexible to choose 1. JWT & Fluent vs 2.JWT vs 3.Fluent
+            //services.AddFluentValidation();
+            //services.AddJwt();
+            services.AddOpenApiDocumentWithJwtAndFluentSchema();
+            
             services.AddCors(options =>
             {
                 options.AddPolicy(
