@@ -10,8 +10,6 @@ using Microsoft.Extensions.Hosting;
 using NSwag;
 using NSwag.Generation.Processors.Security;
 using System.Linq;
-using ZymLabs.NSwag.FluentValidation;
-using ZymLabs.NSwag.FluentValidation.AspNetCore;
 
 namespace MicroservicesTemplateAPI
 {
@@ -33,13 +31,7 @@ namespace MicroservicesTemplateAPI
 
             services
                 .AddControllers()
-
-                .AddFluentValidation(c =>
-                {
-                    c.RegisterValidatorsFromAssemblyContaining<Startup>();
-
-                    c.ValidatorFactoryType = typeof(HttpContextServiceProviderValidatorFactory);
-                });
+                .AddFluentValidation();
 
             services.AddHealthChecks();
 
