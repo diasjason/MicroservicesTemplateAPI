@@ -7,7 +7,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using ZymLabs.NSwag.FluentValidation.AspNetCore;
 
 namespace MicroservicesTemplateAPI
 {
@@ -29,13 +28,7 @@ namespace MicroservicesTemplateAPI
 
             services
                 .AddControllers()
-
-                .AddFluentValidation(c =>
-                {
-                    c.RegisterValidatorsFromAssemblyContaining<Startup>();
-
-                    c.ValidatorFactoryType = typeof(HttpContextServiceProviderValidatorFactory);
-                });
+                .AddFluentValidation();
 
             services.AddHealthChecks();
 
